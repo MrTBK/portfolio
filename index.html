@@ -74,15 +74,16 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo / Name -->
-      <a href="#" class="flex items-center gap-3 group">
+      <a href="#" class="flex items-center gap-3 group min-w-0">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 group-hover:border-cyan-500/60 ring-1 ring-cyan-500/20 group-hover:ring-cyan-400/40 transition-all shadow-lg shadow-cyan-500/10 flex items-center justify-center shrink-0">
           <span class="font-mono font-extrabold text-sm tracking-wider bg-gradient-to-r from-cyan-400 to-sky-300 bg-clip-text text-transparent">AT</span>
         </div>
-        <div class="flex flex-col">
-          <span class="font-bold text-lg tracking-tight group-hover:text-cyan-400 transition-colors">Mohamed Aziz Tabakh</span>
-          <span class="text-xs text-slate-400 font-mono flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 status-indicator inline-block"></span>
-            Business Intelligence Student &amp; Data Developer
+        <div class="flex flex-col min-w-0">
+          <span class="font-bold text-base sm:text-lg tracking-tight group-hover:text-cyan-400 transition-colors truncate">Mohamed Aziz Tabakh</span>
+          <span class="text-xs text-slate-400 font-mono flex items-center gap-1.5 truncate">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 status-indicator inline-block shrink-0"></span>
+            <span class="hidden sm:inline truncate">Business Intelligence Student &amp; Data Developer</span>
+            <span class="sm:hidden truncate">BI &amp; Data Developer</span>
           </span>
         </div>
       </a>
@@ -100,14 +101,14 @@
       <!-- Action Buttons -->
       <div class="flex items-center gap-2 sm:gap-3">
         <!-- GitHub Link -->
-        <a href="https://github.com/MrTBK" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub Profile (@MrTBK)" class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-all">
+        <a href="https://github.com/MrTBK" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" title="GitHub Profile (@MrTBK)" class="hidden sm:inline-flex p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-all">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
           </svg>
         </a>
 
         <!-- LinkedIn Link -->
-        <a href="https://www.linkedin.com/in/mohamed-aziz-tabakh-7b4674234" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn Profile" class="p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-700 text-slate-400 hover:text-cyan-400 transition-all">
+        <a href="https://www.linkedin.com/in/mohamed-aziz-tabakh-7b4674234" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" title="LinkedIn Profile" class="hidden sm:inline-flex p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 hover:bg-slate-800 hover:border-slate-700 text-slate-400 hover:text-cyan-400 transition-all">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
           </svg>
@@ -122,7 +123,7 @@
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="md:hidden p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white">
+        <button id="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false" class="md:hidden p-2.5 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-400 hover:text-white transition-colors">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -168,7 +169,7 @@
             <p class="text-xs sm:text-sm font-mono tracking-widest text-cyan-400 uppercase font-semibold">
               Mohamed Aziz Tabakh
             </p>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
               Business Intelligence <br>
               <span class="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">Student &amp; Data Developer</span>
             </h1>
@@ -250,7 +251,7 @@
         <!-- Right Profile Image (Column 5) -->
         <div class="lg:col-span-5 flex justify-center relative">
           
-          <div class="relative w-72 sm:w-80 md:w-96">
+          <div class="relative w-64 sm:w-80 md:w-96 max-w-full">
             <!-- Glow background -->
             <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500/30 to-indigo-500/20 rounded-3xl blur-2xl -z-10"></div>
             
@@ -766,7 +767,7 @@
         <div class="relative pl-8 group">
           <div class="absolute -left-[10px] top-2 w-4 h-4 rounded-full bg-cyan-400 border-2 border-slate-900 shadow-[0_0_12px_rgba(6,182,212,1)] group-hover:scale-125 transition-transform"></div>
           
-          <div class="p-7 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-950 border-2 border-cyan-500/60 shadow-xl shadow-cyan-500/10 space-y-4">
+          <div class="p-5 sm:p-7 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900/95 to-slate-950 border-2 border-cyan-500/60 shadow-xl shadow-cyan-500/10 space-y-4">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
               <div>
                 <h3 class="text-xl font-bold text-white">COFICAB Group (Tunisia)</h3>
@@ -1230,7 +1231,7 @@
   <section id="contact" class="py-20 bg-slate-950/80 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="max-w-4xl mx-auto rounded-3xl p-8 sm:p-12 bg-gradient-to-b from-slate-900 via-slate-900/90 to-[#0B0F19] border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div class="max-w-4xl mx-auto rounded-3xl p-6 sm:p-10 md:p-12 bg-gradient-to-b from-slate-900 via-slate-900/90 to-[#0B0F19] border border-slate-800 shadow-2xl relative overflow-hidden">
         
         <div class="absolute -top-24 -right-24 w-72 h-72 ambient-glow-cyan rounded-full pointer-events-none blur-3xl opacity-30"></div>
 
@@ -1344,15 +1345,15 @@
         </div>
 
         <!-- Download & Connect Action Row -->
-        <div class="flex flex-wrap items-center justify-center gap-4">
-          <a href="mailto:Mohamedaziz.tabakh@esen.tn?subject=Opportunity%20Inquiry" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 transition-all flex items-center gap-2">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="mailto:Mohamedaziz.tabakh@esen.tn?subject=Opportunity%20Inquiry" class="w-full sm:w-auto text-center px-8 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 transition-all flex items-center justify-center gap-2">
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
             <span>Send Direct Message</span>
           </a>
 
-          <a href="./resume.pdf" download="Med_Aziz_Tabakh_CV.pdf" class="px-8 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center gap-2">
+          <a href="./resume.pdf" download="Med_Aziz_Tabakh_CV.pdf" class="w-full sm:w-auto text-center px-8 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-semibold text-sm transition-all flex items-center justify-center gap-2">
             <svg class="w-4 h-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
@@ -1386,15 +1387,15 @@
   </footer>
 
   <!-- Lightbox Modal (For Full-Resolution Project Previews) -->
-  <div id="lightbox-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
+  <div id="lightbox-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10">
     <div id="lightbox-backdrop" class="fixed inset-0 bg-slate-950/90 backdrop-blur-md"></div>
     
-    <div class="relative z-10 max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[90vh]">
+    <div class="relative z-10 max-w-5xl w-full bg-slate-900 border border-slate-700/80 rounded-2xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh]">
       
       <!-- Modal Top Bar -->
-      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
-        <h4 id="lightbox-title" class="font-bold text-white text-base truncate"></h4>
-        <button id="lightbox-close" aria-label="Close Preview" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+      <div class="px-4 sm:px-6 py-3 sm:py-4 border-b border-slate-800 flex items-center justify-between">
+        <h4 id="lightbox-title" class="font-bold text-white text-sm sm:text-base truncate"></h4>
+        <button id="lightbox-close" aria-label="Close Preview" class="p-2 sm:p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
           <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
@@ -1402,21 +1403,21 @@
       </div>
 
       <!-- Image Area -->
-      <div class="p-4 bg-slate-950 overflow-auto flex items-center justify-center min-h-[300px]">
-        <img id="lightbox-image" src="" alt="High Resolution Project Preview" class="max-h-[65vh] w-auto object-contain rounded-lg border border-slate-800 shadow-lg">
+      <div class="p-2 sm:p-4 bg-slate-950 overflow-auto flex items-center justify-center min-h-[200px] sm:min-h-[300px]">
+        <img id="lightbox-image" src="" alt="High Resolution Project Preview" class="max-h-[60vh] sm:max-h-[65vh] w-auto max-w-full object-contain rounded-lg border border-slate-800 shadow-lg">
       </div>
 
       <!-- Caption / Info -->
-      <div class="px-6 py-3 bg-slate-900 border-t border-slate-800">
-        <p id="lightbox-desc" class="text-xs text-slate-300"></p>
+      <div class="px-4 sm:px-6 py-2.5 sm:py-3 bg-slate-900 border-t border-slate-800">
+        <p id="lightbox-desc" class="text-xs text-slate-300 leading-relaxed"></p>
       </div>
 
     </div>
   </div>
 
   <!-- Toast Notification -->
-  <div id="copy-toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900/95 border border-cyan-500/40 text-cyan-300 text-xs font-mono shadow-2xl flex items-center gap-2">
-    <svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <div id="copy-toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-xl bg-slate-900/95 border border-cyan-500/40 text-cyan-300 text-xs font-mono shadow-2xl flex items-center gap-2 max-w-[90vw] whitespace-nowrap">
+    <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
     </svg>
     <span id="toast-message">Copied to clipboard!</span>

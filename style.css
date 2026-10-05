@@ -6,12 +6,17 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Custom Scrollbar */
@@ -157,3 +162,17 @@ body {
   border-radius: 9999px;
   box-shadow: 0 0 8px rgba(56, 189, 248, 0.7);
 }
+
+/* Touch device optimizations (phones and tablets) */
+@media (hover: none) and (pointer: coarse) {
+  /* Tap-friendly lightbox trigger area */
+  .lightbox-trigger-mobile {
+    cursor: pointer;
+  }
+  
+  /* Disable heavy card lift on touch scroll */
+  .project-card:hover {
+    transform: none;
+  }
+}
+

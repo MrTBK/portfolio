@@ -74,6 +74,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Enable direct tap-to-zoom on mobile for project & competition images
+  document.querySelectorAll('.project-card .aspect-video, #achievements .aspect-video').forEach(wrapper => {
+    const trigger = wrapper.querySelector('.lightbox-trigger');
+    const img = wrapper.querySelector('img');
+    if (trigger && img) {
+      img.classList.add('cursor-pointer');
+      img.addEventListener('click', (e) => {
+        // Prevent conflict if user specifically clicked a link or button
+        if (e.target.closest('a') || e.target.closest('button')) return;
+        const src = trigger.getAttribute('data-img') || img.src;
+        const title = trigger.getAttribute('data-title') || img.alt || 'Preview';
+        const desc = trigger.getAttribute('data-desc') || '';
+        openLightbox(src, title, desc);
+      });
+    }
+  });
+
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeLightbox);
   document.addEventListener('keydown', (e) => {
@@ -117,16 +134,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // 5. Mobile Menu Toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+  const mobileMenuLinks = document.querySelectorAll('#mobile-menu a');
+
+  function setMobileMenuState(isOpen) {
+    if (!mobileMenuBtn || !mobileMenu) return;
+    if (isOpen) {
+      mobileMenu.classList.remove('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      mobileMenuBtn.innerHTML = `
+        <svg class="w-5 h-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>`;
+    } else {
+      mobileMenu.classList.add('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenuBtn.innerHTML = `
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>`;
+    }
+  }
 
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.contains('hidden');
+      setMobileMenuState(isHidden);
     });
 
     mobileMenuLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+        setMobileMenuState(false);
       });
     });
   }
