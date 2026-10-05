@@ -5,6 +5,103 @@ document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.remove('light');
   localStorage.removeItem('portfolio-theme');
 
+  // ==========================================
+  // Internationalization (i18n) Engine
+  // ==========================================
+  const langToggleBtn = document.getElementById('lang-toggle-btn');
+  const langCurrentLabel = document.getElementById('lang-current-label');
+  const mobileLangBtns = document.querySelectorAll('.lang-switch-btn');
+  let currentLanguage = 'en';
+
+  function detectUserLanguage() {
+    const saved = localStorage.getItem('portfolio_lang');
+    if (saved === 'en' || saved === 'fr') {
+      return saved;
+    }
+    const browserLang = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    if (browserLang.toLowerCase().startsWith('fr')) {
+      return 'fr';
+    }
+    return 'en';
+  }
+
+  function setLanguage(lang) {
+    const targetLang = (lang === 'fr') ? 'fr' : 'en';
+    currentLanguage = targetLang;
+    try {
+      localStorage.setItem('portfolio_lang', targetLang);
+    } catch (e) {
+      // Ignore storage errors in restricted contexts
+    }
+    document.documentElement.lang = targetLang;
+
+    // Update navbar toggle label
+    if (langCurrentLabel) {
+      langCurrentLabel.textContent = targetLang.toUpperCase();
+    }
+
+    // Update mobile menu language switcher buttons
+    mobileLangBtns.forEach(btn => {
+      const btnLang = btn.getAttribute('data-lang');
+      if (btnLang === targetLang) {
+        btn.classList.add('bg-cyan-500', 'text-white', 'font-bold', 'shadow-sm');
+        btn.classList.remove('text-slate-400', 'hover:text-slate-200');
+      } else {
+        btn.classList.remove('bg-cyan-500', 'text-white', 'font-bold', 'shadow-sm');
+        btn.classList.add('text-slate-400', 'hover:text-slate-200');
+      }
+    });
+
+    // Translate DOM elements
+    const dict = (window.translations && window.translations[targetLang]) || (typeof translations !== 'undefined' && translations[targetLang]) || {};
+
+    // 1. Text elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key] !== undefined) {
+        el.textContent = dict[key];
+      }
+    });
+
+    // 2. HTML elements (rich formatting like strong, span)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.getAttribute('data-i18n-html');
+      if (dict[key] !== undefined) {
+        el.innerHTML = dict[key];
+      }
+    });
+
+    // 3. Dynamic attributes (e.g. data-i18n-title)
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.getAttribute('data-i18n-title');
+      if (dict[key] !== undefined) {
+        el.title = dict[key];
+      }
+    });
+  }
+
+  // Desktop Toggle Event Listener
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', () => {
+      const nextLang = (currentLanguage === 'en') ? 'fr' : 'en';
+      setLanguage(nextLang);
+    });
+  }
+
+  // Mobile Drawer Toggle Event Listeners
+  mobileLangBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const chosenLang = btn.getAttribute('data-lang');
+      if (chosenLang) {
+        setLanguage(chosenLang);
+      }
+    });
+  });
+
+  // Initialize Language
+  const initialLang = detectUserLanguage();
+  setLanguage(initialLang);
+
   // 1. Project Filtering
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
@@ -123,9 +220,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const label = el.getAttribute('data-label') || 'Text';
       if (textToCopy) {
         navigator.clipboard.writeText(textToCopy).then(() => {
-          showToast(`Copied ${label} to clipboard!`);
+          const dict = (window.translations && window.translations[currentLanguage]) || (typeof translations !== 'undefined' && translations[currentLanguage]) || {};
+          let localizedLabel = label;
+          if (currentLanguage === 'fr') {
+            if (label.toLowerCase().includes('email')) localizedLabel = 'Email';
+            else if (label.toLowerCase().includes('phone')) localizedLabel = 'Téléphone';
+          }
+          const toastTpl = dict['toast.copied'] || 'Copied {label} to clipboard!';
+          showToast(toastTpl.replace('{label}', localizedLabel));
         }).catch(() => {
-          showToast(`Failed to copy`);
+          showToast(currentLanguage === 'fr' ? 'Échec de la copie' : 'Failed to copy');
         });
       }
     });
