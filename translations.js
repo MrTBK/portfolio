@@ -17,7 +17,7 @@ const translations = {
     // Hero Section
     "hero.name_tag": "Mohamed Aziz Tabakh",
     "hero.title_prefix": "Business Intelligence",
-    "hero.title_highlight": "Student & Data Developer",
+    "hero.title_highlight": "Student &amp; <span class=\"whitespace-nowrap\">Data Developer</span>",
     "hero.stack": "Python · SQL · Power BI · Data Warehousing · ETL · PostgreSQL",
     "hero.summary": "Building data pipelines, analytical systems, and AI-powered applications.",
     "hero.view_projects": "View Projects",
@@ -214,13 +214,13 @@ const translations = {
     "nav.contact": "Contact",
     "nav.download_cv": "Télécharger CV",
     "nav.download_cv_full": "Télécharger le CV (PDF)",
-    "nav.subtitle": "Étudiant en Business Intelligence & Développeur Données",
+    "nav.subtitle": "Étudiant en Business Intelligence & Développeur Data",
 
     // Hero Section
     "hero.name_tag": "Mohamed Aziz Tabakh",
     "hero.title_prefix": "Business Intelligence",
-    "hero.title_highlight": "Étudiant & Développeur Données",
-    "hero.stack": "Python · SQL · Power BI · Entrepôts de Données · ETL · PostgreSQL",
+    "hero.title_highlight": "Étudiant &amp; <span class=\"whitespace-nowrap\">Développeur Data</span>",
+    "hero.stack": "Python · SQL · Power BI · Data Warehousing · ETL · PostgreSQL",
     "hero.summary": "Conception de pipelines de données, de systèmes décisionnels et d'applications d'IA d'entreprise.",
     "hero.view_projects": "Voir les Projets",
     "hero.download_cv": "Télécharger le CV",
@@ -268,14 +268,14 @@ const translations = {
 
     // Project Cards
     "project.coficab_badge": "Stage en Entreprise",
-    "project.coficab_title": "Plateforme Décisionnelle & IA Coficab",
+    "project.coficab_title": "Coficab — Intégration BI & IA",
     "project.coficab_desc": "Plateforme de données industrielles développée lors d'un stage d'été chez Coficab. Extraction automatisée depuis Excel, nettoyage via Python, intégration SQL Server, tableaux de bord Power BI, application web (Flask & Angular) et chatbot IA pour requêtes en langage naturel.",
 
     "project.customer360_badge": "Intelligence Client",
     "project.customer360_title": "Customer360 — Plateforme d'Analyse Client",
     "project.customer360_desc": "Plateforme d'analyse client e-commerce traitant 95 560 clients et 99 441 commandes sur le jeu de données Olist avec schéma en étoile de Kimball, segmentation RFM et analyse de cohortes.",
 
-    "project.dataforge_badge": "Qualité de Données",
+    "project.dataforge_badge": "Qualité des Données",
     "project.dataforge_title": "DataForge — Moteur de Données & ETL",
     "project.dataforge_desc": "Pipeline ETL par lots avec console d'opérations et validation automatisée des données. Intègre des données commerciales, applique des règles de quarantaine, transforme les données via dbt dans un entrepôt PostgreSQL et surveille la santé du pipeline.",
 
@@ -287,7 +287,7 @@ const translations = {
     "project.maintiq_title": "MaintIQ — Analyse de Maintenance",
     "project.maintiq_desc": "Plateforme d'analyse pour la maintenance des équipements industriels. Traite les relevés de capteurs en temps réel, détecte les anomalies par analyse de score Z glissant, évalue les risques de panne et gère le cycle de vie des ordres d'intervention.",
 
-    "project.masroufi_badge": "Application 100% Hors Ligne",
+    "project.masroufi_badge": "App 100% Hors-ligne",
     "project.masroufi_title": "Masroufi (مصروفي)",
     "project.masroufi_desc": "Application mobile de gestion budgétaire et de dépenses personnelles axée sur la confidentialité. Conçue pour fonctionner entièrement hors ligne sans traçage externe, avec stockage SQLite local chiffré et interface responsive multilingue.",
 
@@ -297,7 +297,7 @@ const translations = {
     "exp.subtitle": "Expérience concrète dans l'industrie en pipelines de données et leadership en formation algorithmique.",
     
     // Role 1
-    "exp.r1_company": "Groupe COFICAB (Tunisie)",
+    "exp.r1_company": "COFICAB Group (Tunisie)",
     "exp.r1_role": "Stagiaire d'été — Business Intelligence & IA",
     "exp.r1_mentor": "(Encadré par Wassim Adeyssi)",
     "exp.r1_date": "Août 2026 · Hybride",
@@ -323,16 +323,16 @@ const translations = {
     "exp.r3_b2": "Formation des participants élèves-ingénieurs aux techniques de résolution de problèmes, à la décomposition analytique et aux bases de la compétition en C++.",
 
     // Role 4
-    "exp.r4_company": "Association Youth Yes We Care",
+    "exp.r4_company": "Youth Yes We Care",
     "exp.r4_role": "Formateur en Robotique · Temps partiel (Sur site)",
-    "exp.r4_date": "Juin 2024 – Présent · 2 ans 5 mois",
+    "exp.r4_date": "Juin 2024 – Présent",
     "exp.r4_b1": "Enseignement des fondamentaux de la robotique, du code, des schémas de circuits électroniques et de l'automatisation.",
     "exp.r4_b2": "Animation de sessions techniques pratiques où les élèves construisent et programment des robots avec Arduino, capteurs, contrôleurs de moteurs et C++ embarqué.",
 
     // Role 5
     "exp.r5_company": "Club ESEN HiVE",
     "exp.r5_role": "Responsable du Pôle Résolution de Problèmes · Temps partiel",
-    "exp.r5_date": "Septembre 2025 – Juin 2026 · 10 mois",
+    "exp.r5_date": "Sept. 2025 – Juin 2026",
     "exp.r5_b1": "Direction du département Problem Solving d'ESEN HiVE, structuration des cursus de formation en algorithmes et programmation compétitive en C++.",
     "exp.r5_b2": "Mentorat technique en algorithmique et conception d'épreuves (Problem Setter) pour le concours phare du club, <strong class=\"text-white\">Bee Battle</strong>.",
 
@@ -341,11 +341,11 @@ const translations = {
     "honors.heading": "Compétitions & Hackathons",
     "honors.subtitle": "Palmarès en programmation compétitive, hackathons et conception d'épreuves algorithmiques.",
 
-    "honors.h1_badge": "🏆 1ère Place Gagnant 🥇",
+    "honors.h1_badge": "🏆 1ère Place 🥇",
     "honors.h1_meta": "Mai 2026 • ENACTUS TBS",
     "honors.h1_title": "Hackathon Monopoly 5.0 — 1ère Place 🥇",
     "honors.h1_desc": "Obtention de la 1ère place avec l'équipe <strong class=\"text-white\">« Team Wahda »</strong> lors du Hackathon Monopoly 5.0 organisé par ENACTUS TBS. Développement d'une solution stratégique et technologique innovante primée par un jury d'experts.",
-    "honors.h1_team": "<span>Équipe :</span> <span class=\"text-amber-400 font-semibold\">Team Wahda</span> • 1ère Place Gagnant 🥇",
+    "honors.h1_team": "<span>Équipe :</span> <span class=\"text-amber-400 font-semibold\">Team Wahda</span> • 1ère Place 🥇",
 
     "honors.h2_badge": "🎖️ 32ème / 100 National",
     "honors.h2_meta": "Avril 2026 • Parcours ICPC",
@@ -353,7 +353,7 @@ const translations = {
     "honors.h2_desc": "Classé 32ème national parmi 100 équipes universitaires d'élite avec 5 problèmes résolus au sein de l'équipe <strong class=\"text-white\">« MakeLoop Bel EscaLoop »</strong> avec Yassine Rached et Hiba Brahmi. Concours officiel sur le parcours ACPC / ICPC.",
     "honors.h2_team": "<span>Équipe :</span> <span class=\"text-indigo-400 font-semibold\">MakeLoop Bel EscaLoop</span> • 5 Problèmes Résolus",
 
-    "honors.h3_badge": "📝 Auteur d'Épreuves (Problem Setter)",
+    "honors.h3_badge": "📝 Problem Setter",
     "honors.h3_meta": "ESEN Manouba",
     "honors.h3_title": "Concours ESEN HiVE & Problem Solving",
     "honors.h3_desc": "Concepteur d'épreuves algorithmiques pour le concours universitaire de programmation compétitive à l'ESEN Manouba. Rédaction de problèmes, création des jeux de tests et supervision de l'arbitrage technique en direct.",
@@ -388,7 +388,7 @@ const translations = {
 
     // Contact Section
     "contact.tag": "Collaborons Ensemble",
-    "contact.heading": "À la recherche d'un stagiaire en BI ou Données ?",
+    "contact.heading": "À la recherche d'un profil BI & Data ?",
     "contact.subtitle": "Ouvert aux opportunités de stage en Business Intelligence, Ingénierie des Données, Analytics et Entrepôts de Données.",
     "contact.email_label": "Adresse Email",
     "contact.phone_label": "Téléphone / WhatsApp",
